@@ -1,0 +1,161 @@
+{
+  "pages": {
+    "home": {
+      "route": "/",
+      "title": "Medexa Care Solutions — Medical Billing & AI Services for Healthcare",
+      "description": "We offer two separate services. Medical Billing & RCM — clean claims, fewer denials, faster payments for US practices. And AI Services — complete AI…"
+    },
+    "services": {
+      "route": "/services",
+      "title": "Medical Billing Services — Billing, Coding, Denials & RCM | Medexa Care Solutions",
+      "description": "Take one service or hand us the full cycle. Each one is built around the same principle: get it right before the claim goes out — so it gets paid the…"
+    },
+    "ai-services": {
+      "route": "/ai-services",
+      "title": "AI Services — Complete AI Systems for Hospitals, Clinics & Healthcare | Medexa Care Solutions",
+      "description": "This is our second, separate service line. Medical Billing lives on its own page — here, AI Services stand on their own. We don't sell one-off tools. We…"
+    },
+    "svc-billing": {
+      "route": "/services/medical-billing",
+      "title": "Medical Billing — Service Detail | Medexa Care Solutions",
+      "description": "The complete day-to-day billing engine for your practice: charges entered, claims scrubbed and submitted, payments posted, and patients billed —…"
+    },
+    "svc-coding": {
+      "route": "/services/medical-coding",
+      "title": "Medical Coding — Service Detail | Medexa Care Solutions",
+      "description": "ICD-10, CPT and HCPCS coding reviewed against your documentation and each payer's rules — so every claim reflects exactly what was done and is paid what…"
+    },
+    "svc-denials": {
+      "route": "/services/denial-management",
+      "title": "Denial Management — Service Detail | Medexa Care Solutions",
+      "description": "Every denial gets a root-cause review, a correction, and an appeal where it is warranted — plus prevention work upstream, so the same denial stops coming…"
+    },
+    "svc-ar-followup": {
+      "route": "/services/ar-follow-up",
+      "title": "A/R Follow-Up — Service Detail | Medexa Care Solutions",
+      "description": "Systematic follow-up on everything you are owed, organised by aging bucket — payer calls, claim-status tracking and persistent work until every balance is…"
+    },
+    "svc-eligibility": {
+      "route": "/services/eligibility-verification",
+      "title": "Eligibility & Benefits Verification — Service Detail | Medexa Care Solutions",
+      "description": "Coverage, copay and deductible verified before the visit, with prior-authorisation support where a payer requires it — so eligibility problems are caught…"
+    },
+    "svc-credentialing": {
+      "route": "/services/credentialing",
+      "title": "Credentialing & Payer Enrollment — Service Detail | Medexa Care Solutions",
+      "description": "Provider applications, CAQH profile management and re-credentialing timelines tracked for you — so enrollment gaps never quietly stop your claims from…"
+    },
+    "svc-rcm": {
+      "route": "/services/revenue-cycle-management",
+      "title": "Full Revenue Cycle Management (RCM) — Service Detail | Medexa Care Solutions",
+      "description": "End-to-end revenue cycle management: eligibility before the visit, coding, submission, denial management, A/R follow-up, payment posting and reporting —…"
+    },
+    "ai-hospital": {
+      "route": "/ai-services/hospital-management",
+      "title": "Complete AI Hospital Management — AI Services | Medexa Care Solutions",
+      "description": "Front desk, patients, departments and administration — connected and run through one AI system designed around how your hospital actually works."
+    },
+    "ai-clinic": {
+      "route": "/ai-services/clinic-management",
+      "title": "AI Clinic Management — AI Services | Medexa Care Solutions",
+      "description": "A single clinic or a whole group of clinics — managed together from one AI system, with the same standards, visibility and patient experience at every…"
+    },
+    "ai-research": {
+      "route": "/ai-services/research-and-data",
+      "title": "Medical Research & Data — AI Services | Medexa Care Solutions",
+      "description": "Medical research, data analysis, reports and insights through AI — turning the data your facility already holds into decisions, publications and improvements."
+    },
+    "ai-journey": {
+      "route": "/ai-services/patient-journey",
+      "title": "Patient Journey Automation — AI Services | Medexa Care Solutions",
+      "description": "From the patient's first inquiry to their appointment to treatment follow-up — the entire journey automated as one connected flow, so no patient is lost…"
+    },
+    "ai-operations": {
+      "route": "/ai-services/operations",
+      "title": "Hospital Operations & Administration — AI Services | Medexa Care Solutions",
+      "description": "Staff workflows, records, documents and reporting — the everyday manual work of running a facility, moved to AI so your people can do the work only people…"
+    },
+    "ai-custom": {
+      "route": "/ai-services/custom",
+      "title": "Custom AI Solutions for Healthcare — AI Services | Medexa Care Solutions",
+      "description": "Don't see what you need? Any medical-related AI service — for a hospital, a medical centre, a clinic or a research team — designed and built around your…"
+    },
+    "specialties": {
+      "route": "/specialties",
+      "title": "Specialties We Serve | Medexa Care Solutions",
+      "description": "Every specialty has its own codes, modifiers, and payer quirks. We match our coding and denial work to the rules of yours — search below to find yours."
+    },
+    "process": {
+      "route": "/how-it-works",
+      "title": "How It Works — Free Audit to Go Live in 5 Steps | Medexa Care Solutions",
+      "description": "No disruption, no system change, no leap of faith. It starts with a free, written review of where your revenue stands today — and every step after that is…"
+    },
+    "why": {
+      "route": "/why-us",
+      "title": "Why Choose Medexa Care Solutions | Medexa Care Solutions",
+      "description": "You should never have to wonder what your billing company did this week. Here's how we work — and how we're different from the typical billing service."
+    },
+    "faq": {
+      "route": "/faq",
+      "title": "FAQ — Billing, Pricing, HIPAA & AI Questions | Medexa Care Solutions",
+      "description": "Billing, pricing, security, AI Services and specialties — answered plainly. Search below, or ask us directly if yours isn't here."
+    },
+    "contact": {
+      "route": "/contact",
+      "title": "Contact — Free Billing Audit & AI Consultation | Medexa Care Solutions",
+      "description": "Request a free billing audit, a free AI consultation, or both. Written findings, an exact quote, and no obligation — whichever you choose."
+    },
+    "svc-audit": {
+      "route": "/services/billing-audit",
+      "title": "Medical Billing Audit — Service Detail | Medexa Care Solutions",
+      "description": "A structured, independent review of your billing operation — claims, coding, denials and aging A/R — with the findings in writing, whether you work with…"
+    },
+    "svc-clearinghouse": {
+      "route": "/services/clearinghouse",
+      "title": "Clearinghouse Services — Service Detail | Medexa Care Solutions",
+      "description": "One reliable connection between your practice and every payer: claims scrubbed and polished before they go out, submitted instantly, and tracked until the…"
+    },
+    "svc-seo": {
+      "route": "/services/healthcare-seo",
+      "title": "Healthcare SEO — Service Detail | Medexa Care Solutions",
+      "description": "Search engine optimization built specifically for medical practices: when patients in your area search for the care you provide, your practice is the one…"
+    },
+    "sol-platform": {
+      "route": "/solutions/billing-platform",
+      "title": "Medexa Billing Platform — Solutions | Medexa Care Solutions",
+      "description": "The working platform behind our billing service: electronic claims submission, a real-time reporting dashboard, automated workflows, patient invoicing and…"
+    },
+    "sol-clearinghouse": {
+      "route": "/solutions/clearinghouse",
+      "title": "Clearinghouse — Solutions | Medexa Care Solutions",
+      "description": "Our clearinghouse connection scrubs and polishes every claim, submits it instantly, checks eligibility, and feeds payment posting automatically — one pipe…"
+    },
+    "sol-practice": {
+      "route": "/solutions/practice-software",
+      "title": "Practice Software — EHR & PMS Friendly | Medexa Care Solutions",
+      "description": "You do not need new software to work with us. Our platform is EHR- and PMS-friendly: we connect to the practice software you already use and fit our…"
+    },
+    "solutions": {
+      "route": "/solutions",
+      "title": "Solutions — Billing Platform, Clearinghouse & Practice Software | Medexa Care Solutions",
+      "description": "Our Solutions are the technology layer of Medexa: the billing platform our team works on, the clearinghouse connection your claims travel through, and a…"
+    },
+    "for-you": {
+      "route": "/for-you",
+      "title": "For You — Who We Serve | Medexa Care Solutions",
+      "description": "A solo physician and a hospital do not have the same billing problems. Find the segment that sounds like you — each one leads to the service set built for it."
+    },
+    "pricing": {
+      "route": "/pricing",
+      "title": "Pricing — Custom Quote Based on Your Collections | Medexa Care Solutions",
+      "description": "Tiered pricing based on your monthly collections — 4.99% up to $50,000, 3.99% from $50,000–$150,000, and 2.99% over $150,000. You only pay when you get…"
+    }
+  },
+  "legacy": {
+    "system": "ai-services",
+    "ai-integration": "ai-services",
+    "audit-form": "contact",
+    "audit": "why",
+    "top": "home"
+  }
+}
