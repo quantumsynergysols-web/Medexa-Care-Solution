@@ -1,0 +1,6 @@
+# Never upload internal documents, local leads or secrets to Vercel
+/docs
+/.data
+/.claude
+.env*
+!.env.example

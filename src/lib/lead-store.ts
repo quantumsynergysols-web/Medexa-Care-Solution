@@ -43,7 +43,9 @@ export function newReference(): string {
 }
 
 export async function saveLead(lead: StoredLead): Promise<void> {
-  const file = process.env.LEADS_FILE ?? path.join(process.cwd(), ".data", "leads.jsonl");
+  // Serverless hosts (Vercel) only allow writes under /tmp, which is temporary: rely on email there.
+  const defaultDir = process.env.VERCEL ? "/tmp" : path.join(process.cwd(), ".data");
+  const file = process.env.LEADS_FILE ?? path.join(defaultDir, "leads.jsonl");
   await mkdir(path.dirname(file), { recursive: true });
   await appendFile(file, JSON.stringify(lead) + "\n", "utf8");
 }

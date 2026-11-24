@@ -48,3 +48,5 @@ next-env.d.ts
 /docs/
 # local editor / preview config
 /.claude/
+
+.vercel

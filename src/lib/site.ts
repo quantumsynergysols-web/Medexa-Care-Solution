@@ -2,7 +2,17 @@ import type { Metadata } from "next";
 import content from "@/content/pages.json";
 
 export const SITE_NAME = "Medexa Care Solutions";
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000").replace(/\/$/, "");
+/**
+ * Public base URL. Set NEXT_PUBLIC_SITE_URL for the real domain. On Vercel without it, the
+ * project's production URL is used so canonical links and the sitemap never say "localhost".
+ */
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : "http://localhost:3000")
+).replace(/\/$/, "");
+
+/** A Vercel deployment without the real domain configured is a staging copy: keep it out of search engines. */
+export const IS_STAGING = Boolean(process.env.VERCEL) && !process.env.NEXT_PUBLIC_SITE_URL;
 
 type PageMeta = { route: string; title: string; description: string };
 
