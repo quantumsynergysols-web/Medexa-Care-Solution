@@ -2,14 +2,14 @@
 
 import { useEffect } from "react";
 
-/** Sample claim feed shown in the hero dashboard — illustrative data, not live claims. */
+/** Sample AI activity feed shown in the hero dashboard — illustrative data, not live activity. */
 const FEED = [
-  { t: "CLM-90412 · Blue Cross Blue Shield", s: "Paid", c: "paid" },
-  { t: "CLM-90413 · Medicare", s: "Approved", c: "ok" },
-  { t: "CLM-90414 · Aetna", s: "Submitted", c: "sub" },
-  { t: "CLM-90415 · UnitedHealthcare", s: "Paid", c: "paid" },
-  { t: "CLM-90416 · Cigna", s: "In Review", c: "rev" },
-  { t: "CLM-90417 · Humana", s: "Approved", c: "ok" },
+  { t: "Front Desk AI · New inquiry answered", s: "Answered", c: "ok" },
+  { t: "Clinic AI · Appointment confirmed", s: "Booked", c: "sub" },
+  { t: "Journey AI · Intake form completed", s: "Ready", c: "ok" },
+  { t: "Operations AI · Staff rota updated", s: "Done", c: "paid" },
+  { t: "Research AI · Monthly report generated", s: "Sent", c: "sub" },
+  { t: "Follow-Up AI · Recall reminder sent", s: "Sent", c: "rev" },
 ];
 
 function formatValue(value: number, el: HTMLElement): string {
@@ -23,7 +23,7 @@ function formatValue(value: number, el: HTMLElement): string {
   return s;
 }
 
-/** Home page animations: KPI counters, donut, claim pipeline, claim feed and the hero network canvas. */
+/** Home page animations: KPI counters, donut, patient-journey pipeline, AI activity feed and the hero network canvas. */
 export default function HomeFx() {
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -52,7 +52,8 @@ export default function HomeFx() {
     const donut = document.getElementById("donutVal");
     if (donut) {
       if (reduced) donut.style.transition = "none";
-      donut.style.strokeDashoffset = String(314.16 * (1 - 0.982));
+      const rate = parseFloat(donut.getAttribute("data-rate") ?? "0.982");
+      donut.style.strokeDashoffset = String(314.16 * (1 - rate));
     }
 
     /* ---- claim pipeline ---- */

@@ -28,35 +28,104 @@ export function pageMetadata(id: string): Metadata {
   };
 }
 
-/** Desktop navigation, in the same order as the approved prototype. */
-export const MAIN_NAV = [
+/* ---------------- Navigation ----------------
+ * Team lead direction (24 Nov 2026): AI Services lead; Medical Billing is ONE menu entry whose
+ * service pages live inside it. Billing-only pages (Solutions, Specialties, Pricing, For You)
+ * therefore sit in the Medical Billing menu instead of the top bar.
+ */
+export type NavLink = { href: string; label: string; hint?: string };
+/** An empty title continues the previous column's heading. */
+export type NavGroup = { title: string; links: NavLink[] };
+export type NavItem = {
+  href: string;
+  label: string;
+  /** Extra path prefixes that mark this item active (detail pages highlight their parent). */
+  match?: string[];
+  menu?: { groups: NavGroup[]; allLabel: string; cta: NavLink };
+};
+
+export const NAV: NavItem[] = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Medical Billing" },
-  { href: "/ai-services", label: "AI Services" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/specialties", label: "Specialties" },
+  {
+    href: "/ai-services",
+    label: "AI Services",
+    menu: {
+      groups: [
+        {
+          title: "AI capabilities",
+          links: [
+            { href: "/ai-services/hospital-management", label: "Complete AI Hospital Management", hint: "Front desk, departments and admin in one system" },
+            { href: "/ai-services/clinic-management", label: "AI Clinic Management", hint: "One clinic or a whole group, run together" },
+            { href: "/ai-services/research-and-data", label: "Medical Research & Data", hint: "Analysis, reports and insights from your data" },
+          ],
+        },
+        {
+          title: "",
+          links: [
+            { href: "/ai-services/patient-journey", label: "Patient Journey Automation", hint: "Inquiry to appointment to follow-up" },
+            { href: "/ai-services/operations", label: "Hospital Operations & Administration", hint: "Workflows, records and reporting moved to AI" },
+            { href: "/ai-services/custom", label: "Custom AI Solutions", hint: "If it's medical and it's AI, we can build it" },
+          ],
+        },
+      ],
+      allLabel: "All AI Services",
+      cta: { href: "/contact", label: "Book a Free AI Consultation" },
+    },
+  },
+  {
+    href: "/services",
+    label: "Medical Billing",
+    match: ["/solutions", "/specialties", "/pricing", "/for-you"],
+    menu: {
+      groups: [
+        {
+          title: "Billing services",
+          links: [
+            { href: "/services/medical-billing", label: "Medical Billing" },
+            { href: "/services/medical-coding", label: "Medical Coding" },
+            { href: "/services/denial-management", label: "Denial Management" },
+            { href: "/services/ar-follow-up", label: "A/R Follow-Up" },
+            { href: "/services/eligibility-verification", label: "Eligibility Verification" },
+          ],
+        },
+        {
+          title: "",
+          links: [
+            { href: "/services/credentialing", label: "Credentialing & Enrollment" },
+            { href: "/services/revenue-cycle-management", label: "Full RCM" },
+            { href: "/services/billing-audit", label: "Medical Billing Audit" },
+            { href: "/services/clearinghouse", label: "Clearinghouse Services" },
+            { href: "/services/healthcare-seo", label: "Healthcare SEO" },
+          ],
+        },
+        {
+          title: "Pricing & platform",
+          links: [
+            { href: "/pricing", label: "Pricing — Get a Quote" },
+            { href: "/specialties", label: "Specialties" },
+            { href: "/for-you", label: "Who We Serve" },
+            { href: "/solutions", label: "Solutions — Billing Platform" },
+            { href: "/solutions/clearinghouse", label: "Clearinghouse Platform" },
+            { href: "/solutions/practice-software", label: "Practice Software" },
+          ],
+        },
+      ],
+      allLabel: "All Medical Billing services",
+      cta: { href: "/contact", label: "Get a Free Billing Audit" },
+    },
+  },
   { href: "/how-it-works", label: "Process" },
   { href: "/why-us", label: "Why Us" },
   { href: "/faq", label: "FAQ" },
-  { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact Us" },
-] as const;
+];
 
-export const MOBILE_NAV = [
-  { href: "/", label: "Home" },
-  { href: "/services", label: "Medical Billing" },
-  { href: "/ai-services", label: "AI Services" },
-  { href: "/solutions", label: "Solutions" },
-  { href: "/for-you", label: "For You" },
-  { href: "/specialties", label: "Specialties" },
-  { href: "/how-it-works", label: "How It Works" },
-  { href: "/why-us", label: "Why Us" },
-  { href: "/faq", label: "FAQ" },
-  { href: "/pricing", label: "Pricing — Get a Quote" },
-] as const;
-
-/** A detail page highlights its parent hub, as in the prototype router. */
+/** Exact or nested match: a detail page highlights its parent hub, as in the prototype router. */
 export function isActive(href: string, pathname: string): boolean {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(href + "/");
+}
+
+export function isItemActive(item: NavItem, pathname: string): boolean {
+  return [item.href, ...(item.match ?? [])].some((h) => isActive(h, pathname));
 }

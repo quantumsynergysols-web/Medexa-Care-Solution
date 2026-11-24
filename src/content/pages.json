@@ -2,8 +2,8 @@
   "pages": {
     "home": {
       "route": "/",
-      "title": "Medexa Care Solutions — Medical Billing & AI Services for Healthcare",
-      "description": "We offer two separate services. Medical Billing & RCM — clean claims, fewer denials, faster payments for US practices. And AI Services — complete AI…"
+      "title": "Medexa Care Solutions — AI Services for Healthcare & Medical Billing",
+      "description": "Our lead service is AI Services for healthcare — complete, connected AI systems that can run a facility end to end: front desk, patient journey,…"
     },
     "services": {
       "route": "/services",

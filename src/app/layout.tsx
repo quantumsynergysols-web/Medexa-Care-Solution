@@ -24,9 +24,9 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: { default: `${SITE_NAME} — Medical Billing & AI Services for Healthcare`, template: `%s | ${SITE_NAME}` },
+  title: { default: `${SITE_NAME} — AI Services for Healthcare & Medical Billing`, template: `%s | ${SITE_NAME}` },
   description:
-    "Medexa Care Solutions — two separate services on one site: Medical Billing & RCM for US practices, and AI Services — complete AI systems for healthcare.",
+    "Medexa Care Solutions — AI Services first: complete AI systems for hospitals, medical centres, clinics and practices, plus Medical Billing & RCM for US practices as a separate service.",
   applicationName: SITE_NAME,
 };
 
@@ -43,7 +43,7 @@ const organizationJsonLd = {
   name: SITE_NAME,
   url: SITE_URL,
   logo: `${SITE_URL}/logo.png`,
-  description: "Medical Billing & RCM for US practices, and AI Services for hospitals, medical centres, clinics and practices.",
+  description: "AI Services for hospitals, medical centres, clinics and practices, and Medical Billing & RCM for US practices.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
